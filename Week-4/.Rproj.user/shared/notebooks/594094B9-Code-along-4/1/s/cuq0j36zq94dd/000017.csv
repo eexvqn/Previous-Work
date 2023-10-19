@@ -1,0 +1,5 @@
+"0","# Enter code here"
+"0","hotels %>%"
+"0","  mutate(little_ones = babies + children) %>%"
+"0","  filter(little_ones >= 1, hotel == ""Resort Hotel"") %>%"
+"0","  select(little_ones, hotel)"

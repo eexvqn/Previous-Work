@@ -1,0 +1,12 @@
+---
+title: "Week-9-entry"
+author: "Tan Ee Xuan"
+date: "2023-10-18"
+output: html_document
+---
+
+Document
+1. The topic I have chose to finalise on would be on weather in 
+```{r, eval=TRUE, echo=TRUE}
+
+```

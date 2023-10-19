@@ -1,0 +1,17 @@
+---
+title: "Challenge-1"
+author: "Tan Ee Xuan"
+date: "2023-08-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Hello, my name is Ee Xuan and I am a Year 2 student under the faculty of arts and social science! I like to grow plants!
+
+```{r, out.height= "278px",out.width= "500px",echo=FALSE,eval=TRUE,fig.cap="R_Studio_Layout"}
+knitr::include_graphics("/Users/eexuan/Downloads/R_Studio_Layout.png")
+
+```

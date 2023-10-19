@@ -1,0 +1,4 @@
+"0","# Enter code here"
+"0","comm_data %>%"
+"0","  mutate(length_of_message = nchar(message), product = length_of_message*sentiment) %>%"
+"0","  arrange(desc(product))"

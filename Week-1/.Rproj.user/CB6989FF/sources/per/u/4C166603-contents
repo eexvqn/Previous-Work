@@ -1,0 +1,12 @@
+---
+title: "Challenge-2"
+author: "Tan Ee Xuan"
+date: "2023-08-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Question 1.1: CSV file stands for Comma-separated values file. It uses commas to seperate the values and it allows the data to be saved in a table format.

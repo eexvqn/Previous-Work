@@ -1,0 +1,6 @@
+"0","# Enter code here"
+"0","summarise(hotels, "
+"0","          mean_adr = mean(adr), "
+"0","          min_adr = min(adr), "
+"0","          max_adr = max(adr),"
+"0","          median_adr = median(adr))"

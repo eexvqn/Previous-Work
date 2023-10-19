@@ -1,0 +1,145 @@
+---
+title: "Quiz"
+author: "Tan Ee Xuan"
+date: "2023-09-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, eval=TRUE,echo=TRUE}
+x <- c("123",1,2)
+as.numeric(x)
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# Enter code here
+library(tidyverse)
+gapminder <- read_csv("gapminder.csv")
+gapminder
+
+```
+
+```{r, eval=TRUE,echo=TRUE}
+# Enter code here
+gapminder %>%
+  select(country, continent, year)
+
+select(gapminder, country, continent, year)
+
+count(gapminder, country)
+
+```
+List only the rows corresponding to Singapore in the decreasing order of their gdpPercap (only code required)
+```{r, eval=TRUE,echo=TRUE}
+# Enter code here
+gapminder %>%
+  filter(country == "Singapore") %>%
+  arrange(desc(gdpPercap))
+
+```
+Find the mean value of life expectancy of Singapore (only code required)
+```{r, eval=TRUE,echo=TRUE}
+# Enter code here
+gapminder %>%
+  filter(country == "Singapore") %>%
+  summarise(mean(lifeExp))
+
+```
+
+Obtain a plot of Singapore’s population from 1952 to 2007 (only code required)
+
+```{r, eval=TRUE,echo=TRUE}
+# Enter code here
+A <- gapminder %>%
+  filter(country == "Singapore", year >= 1952, year <= 2007)
+
+ggplot(A) +
+aes(x=year,y=pop) +
+    geom_point() 
+
+```
+
+# Definition of function
+```{r, eval=TRUE,echo=TRUE}
+# Enter code here
+
+
+print_updated_value <- function(x,y='100') {
+  new_y <- as.numeric(y)
+  print(x+new_y)
+}
+
+print_updated_value(23)
+```
+
+
+Evaluate the code in RStudio and debug it to obtain the output. Explain what was wrong with the code, what the error-free code does and the reason for the output
+
+```{r, eval=TRUE,echo=TRUE}
+multiply <- function(value) {
+  
+  function_inside_function <- function(multiplier) {
+    return(multiplier*value)
+  }
+  
+  return(function_inside_function(10))
+  }
+
+multiply(50)
+```
+```{r, eval=TRUE,echo=TRUE}
+
+function_inside_function <- function(multiplier) {
+  return(multiplier*value)
+}
+
+function_inside_function(12)
+```
+
+Write a function called guessNum for a guessing game where the players must guess the value of a number stored in a variable answer,
+
+a. In the first step, take the user's guess as the argument 
+
+b. In the local scope of guessNum, initialize the value of the variable answer to be 15
+
+c. Compare the user’s guess with the variable answer
+
+d. Print out an appropriate message to the console, telling them if guess was above, below, or right on the number stored in answer
+
+e. In the global scope, initialize the value of a variable guess to be 16. Write the function call for the guessNum function, using guess as the argument.
+
+Only final code is required.
+```{r, eval=TRUE,echo=TRUE}
+
+guessNum <- function(guess) {
+  ifelse(guess == 15, "You're Right!", 
+         ifelse(guess < 15, "Your guess is too low",
+                "Your guess is too high"))
+}
+
+guessNum(16)
+```
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

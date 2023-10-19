@@ -1,0 +1,4 @@
+"0",""
+"0","comm_data %>%"
+"0","  mutate(product = nchar(message)*sentiment) %>%"
+"0","  arrange(desc(product))"
