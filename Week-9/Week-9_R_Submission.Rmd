@@ -6,7 +6,26 @@ output: html_document
 ---
 
 Document
-1. The topic I have chose to finalise on would be on weather in 
-```{r, eval=TRUE, echo=TRUE}
 
+Answer the following questions in an R Markdown file,
+
+(1) What is the topic that you have finalized? (Answer in 1 or 2 sentences),
+
+The topic I have chosen to finalise on would be on Deforestation in Brazil and how it affects the food supply. 
+
+(2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+
+The data sources I have curated are as follows:
+
+```{r, eval=TRUE, echo=TRUE}
+library(tidytuesdayR)
+library(tidyverse)
+read_csv("brazil_loss.csv")
+soybean_use <- read_csv("soybean_use.csv")
+soybean_use %>%
+  filter(entity == "Brazil")
+
+vegetable_oil <- read_csv("vegetable_oil.csv")
+vegetable_oil %>%
+  filter(entity == "Brazil")
 ```
