@@ -1,0 +1,53 @@
+---
+title: "Document-Entries"
+author: "Tan Ee Xuan"
+date: "2023-10-18"
+output: html_document
+---
+
+Week 9
+
+Answer the following questions in an R Markdown file,
+
+(1) What is the topic that you have finalized? (Answer in 1 or 2 sentences),
+
+The topic I have chosen to finalise on would be on Deforestation in Brazil and how it affects the food supply. 
+
+(2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+
+I have decided to use the datasets from Our World in Data and from Climate Watch Data. To be more specific, the datasets I intend to use would be “cattle_owid.csv”, “soybean_owid.csv”, and “forest_area.csv” from Our World in Data and “CW_HistoricalEmissions_ClimateWatch.csv” from Climate Watch Data.
+
+The data sources I have curated are as follows:
+
+```{r, eval=TRUE, echo=TRUE}
+library(tidytuesdayR)
+library(tidyverse)
+read_csv("cattle_owid.csv")
+read_csv("soybean_owid.csv")
+read_csv("forest_area.csv")
+read_csv("historical_emissions_cw.csv")
+```
+
+Week 10
+
+(1) What is the question that you are going to answer? (Answer: One sentence that ends with a question mark that could act like the title of your data story)
+
+Should we prioritise food production or environmental conservation in Brazil?
+
+(2) Why is this an important question? (Answer: 3 sentences, each of which has some evidence, e.g., “According to the United Nations...” to justify why the question you have chosen is important)
+
+According to the United Nations (n.d.), the process of climate change is accelerating as a result of greenhouse gas emissions that humans produce and are responsible for. The effects of climate change will have a devastating impact on countries and communities all around the world, especially for the poor who may depend on the environment for their livelihoods (MercyCorps, 2021). Brazil is one of the largest emitters of greenhouse gasses due to “deforestation, agriculture and other land-use” (Gratten, 2022). 
+
+(3) Which rows and columns of the dataset will be used to answer this question? (Answer: Actual names of the variables in the dataset that you plan to use).
+
+I have decided to use the datasets from Our World in Data and from Climate Watch Data. To be more specific, the datasets I intend to use would be “cattle_owid.csv”, “soybean_owid.csv”, and “forest_area.csv” from Our World in Data and “historical_emissions_cw.csv” from Climate Watch Data.
+
+For the “forest_area.csv” dataset, I will filter the column “entity” for the rows consisting of “Brazil”. I will also filter the column “year” such that it only shows rows with “2011”, “2012”, …, “2019”, and “2020”. I will use the columns “year” and “forest_area”.
+
+For the “soybean_owid.csv” and “cattle_owid.csv” datasets, I will filter the column “Country” for all the rows containing “Brazil” and I will filter the column “Year” such that it only shows rows with “2011”, “2012”, …, “2019”, and “2020”. For “soybean_owid.csv”, I will use the columns “Year”, “Production (t)”, “Land Use (ha)”, “Domestic supply (t)” and “Animal feed (t)”. For “cattle_owid.csv”, I will use the columns “Year”, “Production (t)” and “Producing or slaughtered animals”
+
+For the “historical_emissions_cw.csv” dataset, I will filter the column “Gas” for all the rows containing “All GHG”. I will filter the column “Country” for all the rows containing “BRA” which stands for my country of focus, Brazil. I will only look at the columns “2011”, “2012”, …, “2019”, and “2020”. For the column “Sector”, I will filter out the rows such that it shows only “Land-Use Change and Forestry” and “Agriculture”.
+
+Include the challenges and errors that you faced and how you overcame them.
+
+I struggled to find specific datasets that would provide me with the information that I need to answer my question. Some of the datasets available only helps answer part of the question. I also realised that I had to come up with specific indicators or variables that I want to focus on such that I would not be overwhelmed with the large amount of data available. 
