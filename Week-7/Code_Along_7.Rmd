@@ -319,23 +319,3 @@ library(ggridges)
 ggplot(loans, aes(x = loan_amount, y = grade, fill = grade, color = grade)) +
   geom_density_ridges(alpha = 0.5)
 ```
-
-```{r, eval=TRUE, echo=TRUE}
-
-```
-
-```{r, eval=TRUE, echo=TRUE}
-
-```
-
-```{r, eval=TRUE, echo=TRUE}
-
-```
-
-```{r, eval=TRUE, echo=TRUE}
-
-```
-
-```{r, eval=TRUE, echo=TRUE}
-
-```
