@@ -68,6 +68,7 @@ colour = species, shape = island) +
 geom_point() + scale_colour_viridis_d()
 ```
 
+
 ```{r, eval=TRUE,echo=TRUE}
 ggplot(penguins) + 
   aes(x = bill_depth_mm, y = bill_length_mm,
