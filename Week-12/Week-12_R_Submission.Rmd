@@ -11,11 +11,11 @@ Answer the following questions in an R Markdown file,
 
 (1) What is the topic that you have finalized? (Answer in 1 or 2 sentences),
 
-The topic I have chosen to finalise on would be on the causes of deforestation in Brazil.
+The topic I have chosen to finalise on would be on deforestation in Brazil and how agriculture and livestock produce contributed to deforestation.
 
 (2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
 
-I have decided to use the datasets from Our World in Data and from Climate Watch Data. To be more specific, the datasets I intend to use would be "cattle_owid.csv", "soybean_owid.csv", and "forest_area.csv" from Our World in Data and "CW_HistoricalEmissions_ClimateWatch.csv" from Climate Watch Data.
+I have decided to use the datasets from Our World in Data and from Climate Watch Data. To be more specific, the datasets I intend to use would be "sugarcane.csv", "soybean.csv", "maize.csv", "cattle.csv" from Our World in Data and "historical_emissions.csv" from Climate Watch Data.
 
 The data sources I have curated are as follows:
 
@@ -25,22 +25,17 @@ library(tidyverse)
 ```
 
 ```{r, eval=TRUE, echo=FALSE}
-soybean <- read_csv("soybean_owid_filtered.csv")
-read_csv("forest_area_filtered.csv")
-cattle <- read_csv("cattle_owid_filtered.csv")
-read_csv("historical_emissions_cw_trying.csv")
-
-ggplot(soybean) + 
-  aes(x = year, y = domestic_supply_percapita_kg) +
-  labs(x = "Year", y = "Domestic Suppy (kg/Capita)") +
-  geom_point()
+read_csv("sugarcane.csv")
+read_csv("soybean.csv")
+read_csv("maize.csv")
+#read_csv("cattle.csv")
 ```
 
 ## Week 10
 
 (1) What is the question that you are going to answer? (Answer: One sentence that ends with a question mark that could act like the title of your data story)
 
-Should we prioritise food production or environmental conservation in Brazil?
+How has Agriculture and Livestock Production Contributed to Deforestation in Brazil?
 
 (2) Why is this an important question? (Answer: 3 sentences, each of which has some evidence, e.g., "According to the United Nations..." to justify why the question you have chosen is important)
 
@@ -48,13 +43,13 @@ According to the United Nations (n.d.), the process of climate change is acceler
 
 (3) Which rows and columns of the dataset will be used to answer this question? (Answer: Actual names of the variables in the dataset that you plan to use).
 
-I have decided to use the datasets from Our World in Data and from Climate Watch Data. To be more specific, the datasets I intend to use would be "cattle_owid.csv", "soybean_owid.csv", and "forest_area.csv" from Our World in Data and "historical_emissions_cw.csv" from Climate Watch Data.
+I have decided to use the datasets from Our World in Data and from Climate Watch Data. To be more specific, the datasets I intend to use would be "sugarcane.csv", "soybean.csv", "maize.csv", "cattle.csv" from Our World in Data and "historical_emissions.csv" from Climate Watch Data.
 
-For the "forest_area.csv" dataset, I will filter the column "entity" for the rows consisting of "Brazil". I will also filter the column "year" such that it only shows rows with "2011", "2012", ..., "2019", and "2020". I will use the columns "year" and "forest_area".
+For the "sugarcane.csv", "soybean.csv", and "maize.csv" datasets, I will filter the column "Country" for all the rows containing "Brazil" and I will filter the column "Year" such that it only shows rows with "2011", "2012", ..., "2019", and "2020". For ecah of the datasets, I will use the columns "year", "population,production_kg", "production_kgpercapita", "landuse_ha", "animalfeed_kg", and "animalfeed_kgpercapita". 
 
-For the "soybean_owid.csv" and "cattle_owid.csv" datasets, I will filter the column "Country" for all the rows containing "Brazil" and I will filter the column "Year" such that it only shows rows with "2011", "2012", ..., "2019", and "2020". For "soybean_owid.csv", I will use the columns "Year", "Production (t)", "Land Use (ha)", "Domestic supply (t)" and "Animal feed (t)". For "cattle_owid.csv", I will use the columns "Year", "Production (t)" and "Producing or slaughtered animals"
+For "cattle.csv", I will use the columns "Year", "Production (t)" and "Producing or slaughtered animals"
 
-For the "historical_emissions_cw.csv" dataset, I will filter the column "Gas" for all the rows containing "All GHG". I will filter the column "Country" for all the rows containing "BRA" which stands for my country of focus, Brazil. I will only look at the columns "2011", "2012", ..., "2019", and "2020". For the column "Sector", I will filter out the rows such that it shows only "Land-Use Change and Forestry" and "Agriculture".
+For the "historical_emissions.csv" dataset, I will filter the column "Gas" for all the rows containing "All GHG". I will filter the column "Country" for all the rows containing "BRA" which stands for my country of focus, Brazil. I will only look at the columns "2011", "2012", ..., "2019", and "2020". For the column "Sector", I will filter out the rows such that it shows only "Land-Use Change and Forestry" and "Agriculture".
 
 Include the challenges and errors that you faced and how you overcame them.
 
@@ -76,7 +71,7 @@ I will be using shiny and ggplot to make the story interactive. There will be a 
 
 ```{r, echo=FALSE, eval=TRUE}
 when <- data.frame(
-  Concept = c("Include graphics", "ggplot", "Variables", "Manipulate data (filter, select, group_by, etc)", "Make a simple function", "strsplit", "ifelse", "nchar", "Loops", "Sys.sleep", "substr", "ggplot graphs (geom_bar, geom_point, geom_violin, facet_wrap, facet_grid)", "Shiny App", "tribble", "pivot_longer, pivot_wider", "data.frame"),
+  Concept = c("Include graphics", "ggplot", "Variables", "Manipulate data (filter, select, group_by, etc)", "Make a simple function", "strsplit", "ifelse", "nchar", "Loops", "Sys.sleep", "substr", "ggplot graphs (geom_bar, geom_point, geom_violin, facet_wrap, facet_grid)", "Shiny App", "tribble", "pivot_longer, pivot_wider", "data.frame", ""),
   Week = c("Week-1", "Week-2", "Week-3", "Week-4", "Week-5", "","","", "Week-6","","", "Week-7", "Week-8", "Week-9","Week-9", "")
 )
 
@@ -87,3 +82,5 @@ knitr::kable(when)
 Include the challenges and errors that you faced and how you overcame them.
 
 I had some difficulty in coming up with ideas on what I could do to make the story interactive. To overcome this I went to search up some information and draw some inspiration from others.
+
+
