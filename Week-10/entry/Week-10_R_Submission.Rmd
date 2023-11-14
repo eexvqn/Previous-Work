@@ -1,0 +1,48 @@
+---
+title: "Document-Entries"
+author: "Tan Ee Xuan"
+date: "2023-10-18"
+output: html_document
+---
+
+## Week 9
+
+Answer the following questions in an R Markdown file,
+
+#### (1) What is the topic that you have finalized? (Answer in 1 or 2 sentences),
+
+The topic I have chosen to finalise on would be on deforestation in Brazil and how agriculture and livestock produce contributed to deforestation.
+
+#### (2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+
+I have decided to use the datasets from Our World in Data and from Climate Watch Data. To be more specific, the datasets I intend to use would be "sugarcane.csv", "soybean.csv", "maize.csv", "cattle.csv", "pigmeat.csv", and "poultry.csv" from Our World in Data and "historical_emissions.csv" from Climate Watch Data.
+
+## Week 10
+
+#### (1) What is the question that you are going to answer? (Answer: One sentence that ends with a question mark that could act like the title of your data story)
+
+How has Agriculture and Livestock Production Contributed to Deforestation in Brazil?
+
+#### (2) Why is this an important question? (Answer: 3 sentences, each of which has some evidence, e.g., "According to the United Nations..." to justify why the question you have chosen is important)
+
+According to the United Nations (n.d.), the process of climate change is accelerating as a result of greenhouse gas emissions that humans produce and are responsible for. The effects of climate change will have a devastating impact on countries and communities all around the world, especially for the poor who may depend on the environment for their livelihoods (MercyCorps, 2021). Brazil is one of the largest emitters of greenhouse gasses due to "deforestation, agriculture and other land-use" (Gratten, 2022).
+
+#### (3) Which rows and columns of the dataset will be used to answer this question? (Answer: Actual names of the variables in the dataset that you plan to use).
+
+##### Our World in Data
+
+I have decided to use the datasets from Our World in Data and from Climate Watch Data. To be more specific, the datasets I intend to use would be "sugarcane.csv", "soybean.csv", "maize.csv", "cattle.csv", "pigmeat.csv", and "poultry.csv" from Our World in Data.
+
+For the "sugarcane.csv", "soybean.csv", "maize.csv", "cattle.csv", "pigmeat.csv", and "poultry.csv" datasets, I have filtered the column "Country" for all the rows containing "Brazil" and I filtered the column "Year" such that it only shows rows with "2011", "2012", ..., "2019", and "2020" from its respective raw datasets that I obtained from Our World in Data. 
+
+For each of the "sugarcane.csv", "soybean.csv", and "maize.csv" datasets, I will use the columns "year", "population", "production_kg", "production_kgpercapita", "landuse_ha", "animalfeed_kg", "animalfeed_kgpercapita". 
+
+For each of the "cattle.csv", "pigmeat.csv", and "poultry.csv" datasets, I will use the columns "year", "population", "production_t", "production_kgpercapita", "producing_or_slaughtered_animals", "producing_or_slaughtered_animals_percapita".
+
+##### Climate Watch Data
+
+For the "historical_emissions.csv" dataset, I filtered the column "Gas" for all the rows containing "All GHG". I also filtered the column "Country" for all the rows containing "BRA" which stands for my country of focus, Brazil. I will only look at the years from "2011", "2012", ..., "2019", and "2020". I will use the columns "year", "agriculture", "land_use_change_and_forestry", and "total."
+
+#### Include the challenges and errors that you faced and how you overcame them.
+
+I struggled to find specific datasets that would provide me with the information that I need to answer my question. Some of the datasets available only helps answer part of the question. I also realised that I had to come up with specific indicators or variables that I want to focus on such that I would not be overwhelmed with the large amount of data available.

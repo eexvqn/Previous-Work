@@ -366,102 +366,36 @@ display: none;
 <div id="week-9" class="section level2">
 <h2>Week 9</h2>
 <p>Answer the following questions in an R Markdown file,</p>
-<ol style="list-style-type: decimal">
-<li>What is the topic that you have finalized? (Answer in 1 or 2
-sentences),</li>
-</ol>
+<div id="what-is-the-topic-that-you-have-finalized-answer-in-1-or-2-sentences" class="section level4">
+<h4>(1) What is the topic that you have finalized? (Answer in 1 or 2
+sentences),</h4>
 <p>The topic I have chosen to finalise on would be on deforestation in
-Brazil and agriculture and livestock produce. The question would be “How
-has Agriculture and Livestock Production Contributed to Deforestation in
-Brazil?”.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>What are the data sources that you have curated so far? (Answer 1 or
-2 sentences).</li>
-</ol>
+Brazil and how agriculture and livestock produce contributed to
+deforestation.</p>
+</div>
+<div id="what-are-the-data-sources-that-you-have-curated-so-far-answer-1-or-2-sentences." class="section level4">
+<h4>(2) What are the data sources that you have curated so far? (Answer
+1 or 2 sentences).</h4>
 <p>I have decided to use the datasets from Our World in Data and from
 Climate Watch Data. To be more specific, the datasets I intend to use
-would be “sugarcane.csv”, “soybean.csv”, “maize.csv”, “cattle.csv” from
-Our World in Data and “historical_emissions.csv” from Climate Watch
-Data.</p>
-<p>The data sources I have curated are as follows:</p>
-<pre><code>## Rows: 10 Columns: 7
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## dbl (7): year, population, production_kg, production_kgpercapita, landuse_ha...
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre><code>## # A tibble: 10 × 7
-##     year population production_kg production_kgpercapita landuse_ha
-##    &lt;dbl&gt;      &lt;dbl&gt;         &lt;dbl&gt;                  &lt;dbl&gt;      &lt;dbl&gt;
-##  1  2011  198185300  734006000000                  3704.    9601316
-##  2  2012  199977710  721077000000                  3606.    9705388
-##  3  2013  201721780  768090000000                  3808.   10195166
-##  4  2014  203459650  736109000000                  3618.   10419678
-##  5  2015  205188210  750290000000                  3657.   10111376
-##  6  2016  206859580  768594000000                  3716.   10223894
-##  7  2017  208504960  758646000000                  3639.   10189208
-##  8  2018  210166600  747557000000                  3557.   10024104
-##  9  2019  211782880  753470000000                  3558.   10092430
-## 10  2020  213196300  757117000000                  3551.   10014198
-## # ℹ 2 more variables: animalfeed_kg &lt;dbl&gt;, animalfeed_kgpercapita &lt;dbl&gt;</code></pre>
-<pre><code>## Rows: 10 Columns: 7
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## dbl (7): year, population, production_kg, production_kgpercapita, landuse_ha...
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre><code>## # A tibble: 10 × 7
-##     year population production_kg production_kgpercapita landuse_ha
-##    &lt;dbl&gt;      &lt;dbl&gt;         &lt;dbl&gt;                  &lt;dbl&gt;      &lt;dbl&gt;
-##  1  2011  198185300   74815450000                   378.   23968664
-##  2  2012  199977710   65848856000                   329.   24975258
-##  3  2013  201721780   81724480000                   405.   27906676
-##  4  2014  203459650   86760520000                   426.   30273764
-##  5  2015  205188210   97464936000                   475.   32181244
-##  6  2016  206859580   96394820000                   466.   33183120
-##  7  2017  208504960  114732000000                   550.   33959880
-##  8  2018  210166600  117912000000                   561.   34777936
-##  9  2019  211782880  114317000000                   540.   35895208
-## 10  2020  213196300  121798000000                   571.   37188168
-## # ℹ 2 more variables: animalfeed_kg &lt;dbl&gt;, animalfeed_kgpercapita &lt;dbl&gt;</code></pre>
-<pre><code>## Rows: 10 Columns: 7
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## dbl (7): year, population, production_kg, production_kgpercapita, landuse_ha...
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<pre><code>## # A tibble: 10 × 7
-##     year population production_kg production_kgpercapita landuse_ha
-##    &lt;dbl&gt;      &lt;dbl&gt;         &lt;dbl&gt;                  &lt;dbl&gt;      &lt;dbl&gt;
-##  1  2011  198185300   55660236000                   281.   13218892
-##  2  2012  199977710   71072810000                   355.   14198496
-##  3  2013  201721780   80273170000                   398.   15279652
-##  4  2014  203459650   79881620000                   393.   15432909
-##  5  2015  205188210   85283070000                   416.   15407143
-##  6  2016  206859580   64188310000                   310.   14970502
-##  7  2017  208504960   97910660000                   470.   17427206
-##  8  2018  210166600   82366530000                   392.   16126368
-##  9  2019  211782880  101126000000                   478.   17515920
-## 10  2020  213196300  103964000000                   488.   18253766
-## # ℹ 2 more variables: animalfeed_kg &lt;dbl&gt;, animalfeed_kgpercapita &lt;dbl&gt;</code></pre>
+would be “sugarcane.csv”, “soybean.csv”, “maize.csv”, “cattle.csv”,
+“pigmeat.csv”, and “poultry.csv” from Our World in Data and
+“historical_emissions.csv” from Climate Watch Data.</p>
+</div>
 </div>
 <div id="week-10" class="section level2">
 <h2>Week 10</h2>
-<ol style="list-style-type: decimal">
-<li>What is the question that you are going to answer? (Answer: One
+<div id="what-is-the-question-that-you-are-going-to-answer-answer-one-sentence-that-ends-with-a-question-mark-that-could-act-like-the-title-of-your-data-story" class="section level4">
+<h4>(1) What is the question that you are going to answer? (Answer: One
 sentence that ends with a question mark that could act like the title of
-your data story)</li>
-</ol>
-<p>Should we prioritise food production or environmental conservation in
-Brazil?</p>
-<ol start="2" style="list-style-type: decimal">
-<li>Why is this an important question? (Answer: 3 sentences, each of
+your data story)</h4>
+<p>How has Agriculture and Livestock Production Contributed to
+Deforestation in Brazil?</p>
+</div>
+<div id="why-is-this-an-important-question-answer-3-sentences-each-of-which-has-some-evidence-e.g.-according-to-the-united-nations-to-justify-why-the-question-you-have-chosen-is-important" class="section level4">
+<h4>(2) Why is this an important question? (Answer: 3 sentences, each of
 which has some evidence, e.g., “According to the United Nations…” to
-justify why the question you have chosen is important)</li>
-</ol>
+justify why the question you have chosen is important)</h4>
 <p>According to the United Nations (n.d.), the process of climate change
 is accelerating as a result of greenhouse gas emissions that humans
 produce and are responsible for. The effects of climate change will have
@@ -470,36 +404,45 @@ especially for the poor who may depend on the environment for their
 livelihoods (MercyCorps, 2021). Brazil is one of the largest emitters of
 greenhouse gasses due to “deforestation, agriculture and other land-use”
 (Gratten, 2022).</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Which rows and columns of the dataset will be used to answer this
-question? (Answer: Actual names of the variables in the dataset that you
-plan to use).</li>
-</ol>
+</div>
+<div id="which-rows-and-columns-of-the-dataset-will-be-used-to-answer-this-question-answer-actual-names-of-the-variables-in-the-dataset-that-you-plan-to-use." class="section level4">
+<h4>(3) Which rows and columns of the dataset will be used to answer
+this question? (Answer: Actual names of the variables in the dataset
+that you plan to use).</h4>
+<div id="our-world-in-data" class="section level5">
+<h5>Our World in Data</h5>
 <p>I have decided to use the datasets from Our World in Data and from
 Climate Watch Data. To be more specific, the datasets I intend to use
-would be “cattle_owid.csv”, “soybean_owid.csv”, and “forest_area.csv”
-from Our World in Data and “historical_emissions_cw.csv” from Climate
-Watch Data.</p>
-<p>For the “forest_area.csv” dataset, I will filter the column “entity”
-for the rows consisting of “Brazil”. I will also filter the column
-“year” such that it only shows rows with “2011”, “2012”, …, “2019”, and
-“2020”. I will use the columns “year” and “forest_area”.</p>
-<p>For the “soybean_owid.csv” and “cattle_owid.csv” datasets, I will
-filter the column “Country” for all the rows containing “Brazil” and I
-will filter the column “Year” such that it only shows rows with “2011”,
-“2012”, …, “2019”, and “2020”. For “soybean_owid.csv”, I will use the
-columns “Year”, “Production (t)”, “Land Use (ha)”, “Domestic supply (t)”
-and “Animal feed (t)”. For “cattle_owid.csv”, I will use the columns
-“Year”, “Production (t)” and “Producing or slaughtered animals”</p>
-<p>For the “historical_emissions_cw.csv” dataset, I will filter the
-column “Gas” for all the rows containing “All GHG”. I will filter the
-column “Country” for all the rows containing “BRA” which stands for my
-country of focus, Brazil. I will only look at the columns “2011”,
-“2012”, …, “2019”, and “2020”. For the column “Sector”, I will filter
-out the rows such that it shows only “Land-Use Change and Forestry” and
-“Agriculture”.</p>
-<p>Include the challenges and errors that you faced and how you overcame
-them.</p>
+would be “sugarcane.csv”, “soybean.csv”, “maize.csv”, “cattle.csv”,
+“pigmeat.csv”, and “poultry.csv” from Our World in Data.</p>
+<p>For the “sugarcane.csv”, “soybean.csv”, “maize.csv”, “cattle.csv”,
+“pigmeat.csv”, and “poultry.csv” datasets, I have filtered the column
+“Country” for all the rows containing “Brazil” and I filtered the column
+“Year” such that it only shows rows with “2011”, “2012”, …, “2019”, and
+“2020” from its respective raw datasets that I obtained from Our World
+in Data.</p>
+<p>For each of the “sugarcane.csv”, “soybean.csv”, and “maize.csv”
+datasets, I will use the columns “year”, “population”, “production_kg”,
+“production_kgpercapita”, “landuse_ha”, “animalfeed_kg”,
+“animalfeed_kgpercapita”.</p>
+<p>For each of the “cattle.csv”, “pigmeat.csv”, and “poultry.csv”
+datasets, I will use the columns “year”, “population”, “production_t”,
+“production_kgpercapita”, “producing_or_slaughtered_animals”,
+“producing_or_slaughtered_animals_percapita”.</p>
+</div>
+<div id="climate-watch-data" class="section level5">
+<h5>Climate Watch Data</h5>
+<p>For the “historical_emissions.csv” dataset, I filtered the column
+“Gas” for all the rows containing “All GHG”. I also filtered the column
+“Country” for all the rows containing “BRA” which stands for my country
+of focus, Brazil. I will only look at the years from “2011”, “2012”, …,
+“2019”, and “2020”. I will use the columns “year”, “agriculture”,
+“land_use_change_and_forestry”, and “total.”</p>
+</div>
+</div>
+<div id="include-the-challenges-and-errors-that-you-faced-and-how-you-overcame-them." class="section level4">
+<h4>Include the challenges and errors that you faced and how you
+overcame them.</h4>
 <p>I struggled to find specific datasets that would provide me with the
 information that I need to answer my question. Some of the datasets
 available only helps answer part of the question. I also realised that I
@@ -507,35 +450,37 @@ had to come up with specific indicators or variables that I want to
 focus on such that I would not be overwhelmed with the large amount of
 data available.</p>
 </div>
+</div>
 <div id="week-11" class="section level2">
 <h2>Week 11</h2>
-<ol style="list-style-type: decimal">
-<li>List the visualizations that you are going to use in your project
-(Answer: What are the variables that you are going to plot? How will it
-answer your larger question?)</li>
-</ol>
+<div id="list-the-visualizations-that-you-are-going-to-use-in-your-project-answer-what-are-the-variables-that-you-are-going-to-plot-how-will-it-answer-your-larger-question" class="section level4">
+<h4>(1) List the visualizations that you are going to use in your
+project (Answer: What are the variables that you are going to plot? How
+will it answer your larger question?)</h4>
 <p>There will be different graphs shown for each relationship I want to
 observe. I will be able to clearly visualise and make comments on how
 certain trends have influenced each other or suggest what might happen
 in the future.</p>
-<p>Some of the relationships I hope to study would be between the cattle
-or soybean production with respect to time. Another would be between the
-emissions and forest area against time.</p>
-<ol start="2" style="list-style-type: decimal">
-<li>How do you plan to make it interactive? (Answer: features of
+<p>Some of the relationships I hope to study would be between the
+soybean, maize, sugar cane, cattle, poultry, and pigmeat production with
+respect to time. The land use over time and percentage of crop used for
+animal feed over time for the soybean, maize, and sugar cane
+datasets.</p>
+</div>
+<div id="how-do-you-plan-to-make-it-interactive-answer-features-of-ggplot2shinymarkdown-do-you-plan-to-use-to-make-the-story-interactive" class="section level4">
+<h4>(2) How do you plan to make it interactive? (Answer: features of
 ggplot2/shiny/markdown do you plan to use to make the story
-interactive)</li>
-</ol>
-<p>I will be using shiny and ggplot to make the story interactive. There
+interactive)</h4>
+<p>I will be using shiny and plotly to make the story interactive. There
 will be a drop-down feature for the user to interact with and learn more
 about the trends of the variable that they are interested in.</p>
-<ol start="3" style="list-style-type: decimal">
-<li>What concepts incorporated in your project were taught in the course
-and which ones were self-learnt? (Answer: Create a table with topics in
-one column and Weeks in the other to indicate which concept taught in
-which week is being used. Leave the entry of the Week column empty for
-self-learnt concepts)</li>
-</ol>
+</div>
+<div id="what-concepts-incorporated-in-your-project-were-taught-in-the-course-and-which-ones-were-self-learnt-answer-create-a-table-with-topics-in-one-column-and-weeks-in-the-other-to-indicate-which-concept-taught-in-which-week-is-being-used.-leave-the-entry-of-the-week-column-empty-for-self-learnt-concepts" class="section level4">
+<h4>(3) What concepts incorporated in your project were taught in the
+course and which ones were self-learnt? (Answer: Create a table with
+topics in one column and Weeks in the other to indicate which concept
+taught in which week is being used. Leave the entry of the Week column
+empty for self-learnt concepts)</h4>
 <table>
 <colgroup>
 <col width="91%" />
@@ -613,13 +558,50 @@ facet_wrap, facet_grid)</td>
 <td align="left">data.frame</td>
 <td align="left"></td>
 </tr>
+<tr class="odd">
+<td align="left">plotly, add_trace</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">fluidrow</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">wellPanel, tabsetPanel</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">toggleImages()</td>
+<td align="left"></td>
+</tr>
 </tbody>
 </table>
-<p>Include the challenges and errors that you faced and how you overcame
-them.</p>
+</div>
+<div id="include-the-challenges-and-errors-that-you-faced-and-how-you-overcame-them.-1" class="section level4">
+<h4>Include the challenges and errors that you faced and how you
+overcame them.</h4>
 <p>I had some difficulty in coming up with ideas on what I could do to
 make the story interactive. To overcome this I went to search up some
 information and draw some inspiration from others.</p>
+</div>
+</div>
+<div id="week-12" class="section level2">
+<h2>Week 12</h2>
+<div id="include-the-challenges-and-errors-that-you-faced-and-how-you-overcame-them.-2" class="section level4">
+<h4>Include the challenges and errors that you faced and how you
+overcame them.</h4>
+<p>Finding a way to organise all the information without it being too
+messy, the different features that can be used in the UI aspect was very
+useful in helping me arrange items. For the part on the server, I had to
+try to find ways to simplify my code such that it would not be too
+complicated. Understanding which parts of the code did what was quite
+useful. I had to Google a lot to try to understand what was wrong with
+my code. I managed to pick up some hacks from all the coding and
+researching (that helped speed up the process a little). For instance, I
+realised I could press an arrow at the left bar of RStudio that
+essentially shortens the function into one line. It helped me look at
+each code better and figure out the larger picture.</p>
+</div>
 </div>
 
 

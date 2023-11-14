@@ -1,0 +1,18 @@
+---
+title: "Week-9-entry"
+author: "Tan Ee Xuan"
+date: "2023-10-18"
+output: html_document
+---
+
+## Week 9
+
+Answer the following questions in an R Markdown file,
+
+#### (1) What is the topic that you have finalized? (Answer in 1 or 2 sentences),
+
+The topic I have chosen to finalise on would be on deforestation in Brazil and how agriculture and livestock produce contributed to deforestation.
+
+#### (2) What are the data sources that you have curated so far? (Answer 1 or 2 sentences).
+
+I have decided to use the datasets from Our World in Data and from Climate Watch Data. To be more specific, the datasets I intend to use would be "sugarcane.csv", "soybean.csv", "maize.csv", "cattle.csv", "pigmeat.csv", and "poultry.csv" from Our World in Data and "historical_emissions.csv" from Climate Watch Data.

@@ -10,9 +10,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ``` {r,echo=TRUE,eval=TRUE}
-knitr::include_graphics("/Users/eexuan/Downloads/AY2324 Sem1/NM2207/Week-8/code_along/code_along_8_img1.png")
+knitr::include_graphics("/Users/eexuan/Downloads/AY2324 Sem1/NM2207/Previous-Work/Week-8/code_along/code_along_8_img1.png")
 ```
 
 ``` {r,echo=TRUE,eval=TRUE}
-knitr::include_graphics("/Users/eexuan/Downloads/AY2324 Sem1/NM2207/Week-8/code_along/code_along_8_img2.png")
+knitr::include_graphics("/Users/eexuan/Downloads/AY2324 Sem1/NM2207/Previous-Work/Week-8/code_along/code_along_8_img2.png")
 ```
